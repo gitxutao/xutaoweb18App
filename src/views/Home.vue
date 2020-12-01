@@ -1,18 +1,10 @@
 <template>
+<van-pull-refresh v-model="isLoading" @refresh="onRefresh">
   <div class="main">
     <div class="header">
-      <van-row type="flex" justify="center">
-        <van-col span="4" class="ewm">
-          <van-icon name="scan" size="30" />
-        </van-col>
-        <van-col span="16">
-          <van-search v-model="value" placeholder="请输入搜索关键词" />
-        </van-col>
-        <van-col span="4">
-          <van-icon name="chat-o" size="30" />
-        </van-col>
-      </van-row>
+      <Header></Header>
     </div>
+    <div class="content8">
     <div class="lbt">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item>
@@ -121,47 +113,218 @@
     <div class="content4">
       <van-row type="flex" justify="space-around">
         <van-col span="6" class="content4-1">
-          <img src="../assets/7.png" alt="" class="tp7">
+          <img src="../assets/7.png" alt class="tp7" />
         </van-col>
         <van-col span="6" class="content4-1">
-          <img src="../assets/5.png" alt="" class="tp7">
+          <img src="../assets/5.png" alt class="tp7" />
         </van-col>
         <van-col span="6" class="content4-1">
-          <img src="../assets/6.png" alt="" class="tp7">
+          <img src="../assets/6.png" alt class="tp7" />
         </van-col>
       </van-row>
     </div>
 
-    <div class="content3">
+    <div class="content5">
       <van-row type="flex" justify="center">
         <van-col span="24">
-          <img src="../assets/2.png" alt class="tp6" />
+          <img src="../assets/3.png" alt class="tp8" />
         </van-col>
       </van-row>
     </div>
-    
-    <van-tabbar v-model="active" active-color="#b17a3f" inactive-color="#acacac" z-index="10">
-      <van-tabbar-item icon="wap-home-o">首页</van-tabbar-item>
-      <van-tabbar-item icon="apps-o">分类</van-tabbar-item>
-      <van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
-      <van-tabbar-item icon="manager-o">我的</van-tabbar-item>
-    </van-tabbar>
+
+    <div class="content6" @click="spxq">
+      <van-row type="flex" justify="space-around">
+        <van-col span="12">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp1.png" alt class="tp9" />
+            </li>
+            <li>迎客松茶叶绿茶雀舌毛尖茶</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="sj">￥87.00</span>
+            </li>
+            <li>
+              <span class="jg">￥258.00</span>
+              <span class="xl">销量:110笔</span>
+            </li>
+          </ul>
+        </van-col>
+        <van-col span="12">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp2.png" alt class="tp9" />
+            </li>
+            <li>熙月黄山毛峰礼盒装散装春</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />￥148.00
+            </li>
+            <li>
+              <span class="jg">￥328.00</span>
+              <span class="xl">销量:368笔</span>
+            </li>
+          </ul>
+        </van-col>
+      </van-row>
+    </div>
+    <div class="content7">
+      <van-row type="flex" justify="space-around">
+        <van-col span="9">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp3.png" alt class="tp9" />
+            </li>
+            <li>八马茶叶 太姥山福鼎白茶贡</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="sj">￥87.00</span>
+            </li>
+            <li>
+              <span class="jg">￥258.00</span>
+              <span class="xl">销量:110笔</span>
+            </li>
+          </ul>
+        </van-col>
+        <van-col span="9">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp4.png" alt class="tp9" />
+            </li>
+            <li>春伦茉莉花茶特级浓香型茉</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />￥148.00
+            </li>
+            <li>
+              <span class="jg">￥328.00</span>
+              <span class="xl">销量:368笔</span>
+            </li>
+          </ul>
+        </van-col>
+      </van-row>
+    </div>
+     <div class="content7">
+      <van-row type="flex" justify="space-around">
+        <van-col span="9">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp5.png" alt class="tp9" />
+            </li>
+            <li>瓷罐金俊眉礼盒装 浓香茶叶</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="sj">￥66.00</span>
+            </li>
+            <li>
+              <span class="jg">125.00</span>
+              <span class="xl">销量:60笔</span>
+            </li>
+          </ul>
+        </van-col>
+        <van-col span="9">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp6.png" alt class="tp9" />
+            </li>
+            <li>闽北乌龙武夷山大红袍大红袍</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />￥98
+            </li>
+            <li>
+              <span class="jg">￥152.00</span>
+              <span class="xl">销量:68笔</span>
+            </li>
+          </ul>
+        </van-col>
+      </van-row>
+    </div>
+    <div class="content7">
+      <van-row type="flex" justify="space-around">
+        <van-col span="9">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp7.png" alt class="tp9" />
+            </li>
+            <li>创意礼品功夫茶具套餐一套</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="sj">￥19.00</span>
+            </li>
+            <li>
+              <span class="jg">￥69.00</span>
+              <span class="xl">销量:110笔</span>
+            </li>
+          </ul>
+        </van-col>
+        <van-col span="9">
+          <ul class="box">
+            <li>
+              <img src="../assets/sp8.png" alt class="tp9" />
+            </li>
+            <li>武夷岩茶 武夷山浓香大茶叶</li>
+            <li>
+              <img src="../assets/xsg.png" alt class="tp10" />￥169.00
+            </li>
+            <li>
+              <span class="jg">￥158.00</span>
+              <span class="xl">销量:368笔</span>
+            </li>
+          </ul>
+        </van-col>
+      </van-row>
+    </div>
+    </div>
+    <div>
+      <Footer></Footer>
+    </div>
   </div>
+  </van-pull-refresh>
 </template>
 <script>
+import Footer from "../components/Footer";
+import Header from '../components/Header'
 export default {
+  components: {
+    Footer,
+    Header
+  },
   data() {
     return {
-      active: 0,
       container: null,
-      value: ""
+      value: "",
+      account:"",
+      password:"",
+      isLoading: false,
     };
+  },
+  created(){
+    this.login();
+  },
+  methods: {
+     onRefresh() {
+      setTimeout(() => {
+        this.$toast('刷新成功');
+        this.isLoading = false;
+      }, 1000);
+    },
+    login() {
+      var user=JSON.parse(sessionStorage.getItem("user"));
+      if(user){
+       this.account=user.account1;
+       this.password=user.password1;
+      }
+    },
+    spxq(){
+      this.$router.push({
+        path:'/spxq'
+      })
+    }
   }
 };
 </script>
 <style scoped>
 .main {
   background-color: #f5f5f5;
+  margin-bottom: 50px;
 }
 .header {
   width: 100%;
@@ -230,13 +393,57 @@ export default {
   font-size: 12px;
   color: #e9e3e3;
 }
-.content4-1{
+.content4-1 {
   width: 116px;
   height: 150px;
   background-color: white;
 }
-.tp7{
+.tp7 {
   width: 120px;
   height: 100px;
+}
+.tp8 {
+  width: 100%;
+}
+.tp9 {
+  width: 195px;
+  height: 160px;
+}
+.box {
+  background-color: white;
+}
+.box li:nth-of-type(2) {
+  width: 170px;
+  color: #837d7d;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tp10 {
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  margin: 0px -60px;
+}
+.jg {
+  /* position: absolute;
+  left: 0; */
+  text-decoration: line-through;
+  color: #a8a6a6;
+  justify-content: flex-start;
+}
+/* .box li:nth-of-type(3){
+  color: red;
+}
+.xl{
+  margin-left: 80px;
+  color: #a8a6a6;
+} */
+.content7{
+  padding-top: 10px;
+}
+.content8{
+padding-top: 50px;
 }
 </style>
