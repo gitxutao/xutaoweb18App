@@ -1,10 +1,10 @@
 <template>
-<van-pull-refresh v-model="isLoading" @refresh="onRefresh">
   <div class="main">
     <div class="header">
       <Header></Header>
     </div>
     <div class="content8">
+      <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
     <div class="lbt">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item>
@@ -63,7 +63,7 @@
     <div class="content">
       <van-row type="flex" justify="center">
         <van-col span="9">
-          <img src="../assets/sy1-1.png" alt class="tp1" />
+          <router-link to="/dp" tag="div"><img src="../assets/sy1-1.png" alt class="tp1" /></router-link>
         </van-col>
         <van-col span="13" offset="1">
           <van-row type="flex" justify="center">
@@ -139,12 +139,12 @@
             <li>
               <img src="../assets/sp1.png" alt class="tp9" />
             </li>
-            <li>迎客松茶叶绿茶雀舌毛尖茶</li>
-            <li>
+            <li>迎客松茶叶绿茶雀舌毛尖茶型茉型茉</li>
+            <li class="jg2">
               <img src="../assets/xsg.png" alt class="tp10" />
-              <span class="sj">￥87.00</span>
+              <span class="jg1">￥87.00</span>
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥258.00</span>
               <span class="xl">销量:110笔</span>
             </li>
@@ -155,11 +155,12 @@
             <li>
               <img src="../assets/sp2.png" alt class="tp9" />
             </li>
-            <li>熙月黄山毛峰礼盒装散装春</li>
-            <li>
-              <img src="../assets/xsg.png" alt class="tp10" />￥148.00
+            <li>熙月黄山毛峰礼盒装散装春型茉型茉</li>
+            <li class="jg2">
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="jg1">￥1148.00</span> 
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥328.00</span>
               <span class="xl">销量:368笔</span>
             </li>
@@ -174,12 +175,12 @@
             <li>
               <img src="../assets/sp3.png" alt class="tp9" />
             </li>
-            <li>八马茶叶 太姥山福鼎白茶贡</li>
-            <li>
+            <li>八马茶叶 太姥山福鼎白茶贡型茉型茉</li>
+            <li class="jg2">
               <img src="../assets/xsg.png" alt class="tp10" />
-              <span class="sj">￥87.00</span>
+              <span class="jg1">￥87.00</span>
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥258.00</span>
               <span class="xl">销量:110笔</span>
             </li>
@@ -190,11 +191,12 @@
             <li>
               <img src="../assets/sp4.png" alt class="tp9" />
             </li>
-            <li>春伦茉莉花茶特级浓香型茉</li>
-            <li>
-              <img src="../assets/xsg.png" alt class="tp10" />￥148.00
+            <li>春伦茉莉花茶特级浓香型茉型茉型茉</li>
+            <li class="jg2">
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="jg1">￥48.00</span>
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥328.00</span>
               <span class="xl">销量:368笔</span>
             </li>
@@ -209,13 +211,13 @@
             <li>
               <img src="../assets/sp5.png" alt class="tp9" />
             </li>
-            <li>瓷罐金俊眉礼盒装 浓香茶叶</li>
-            <li>
+            <li>瓷罐金俊眉礼盒装 浓香茶叶型茉型茉</li>
+            <li class="jg2">
               <img src="../assets/xsg.png" alt class="tp10" />
-              <span class="sj">￥66.00</span>
+              <span class="jg1">￥66.00</span>
             </li>
-            <li>
-              <span class="jg">125.00</span>
+            <li class="jg3">
+              <span class="jg">￥125.00</span>
               <span class="xl">销量:60笔</span>
             </li>
           </ul>
@@ -225,11 +227,12 @@
             <li>
               <img src="../assets/sp6.png" alt class="tp9" />
             </li>
-            <li>闽北乌龙武夷山大红袍大红袍</li>
-            <li>
-              <img src="../assets/xsg.png" alt class="tp10" />￥98
+            <li>闽北乌龙武夷山大红袍大红袍型茉</li>
+            <li class="jg2">
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="jg1">￥98</span>
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥152.00</span>
               <span class="xl">销量:68笔</span>
             </li>
@@ -244,12 +247,12 @@
             <li>
               <img src="../assets/sp7.png" alt class="tp9" />
             </li>
-            <li>创意礼品功夫茶具套餐一套</li>
-            <li>
+            <li>创意礼品功夫茶具套餐一套型茉型茉</li>
+            <li class="jg2">
               <img src="../assets/xsg.png" alt class="tp10" />
-              <span class="sj">￥19.00</span>
+              <span class="jg1">￥19.00</span>
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥69.00</span>
               <span class="xl">销量:110笔</span>
             </li>
@@ -260,11 +263,12 @@
             <li>
               <img src="../assets/sp8.png" alt class="tp9" />
             </li>
-            <li>武夷岩茶 武夷山浓香大茶叶</li>
-            <li>
-              <img src="../assets/xsg.png" alt class="tp10" />￥169.00
+            <li>武夷岩茶 武夷山浓香大茶叶型茉型茉</li>
+            <li class="jg2">
+              <img src="../assets/xsg.png" alt class="tp10" />
+              <span class="jg1">￥169.00</span>
             </li>
-            <li>
+            <li class="jg3">
               <span class="jg">￥158.00</span>
               <span class="xl">销量:368笔</span>
             </li>
@@ -272,12 +276,12 @@
         </van-col>
       </van-row>
     </div>
+    </van-pull-refresh>
     </div>
     <div>
       <Footer></Footer>
     </div>
   </div>
-  </van-pull-refresh>
 </template>
 <script>
 import Footer from "../components/Footer";
@@ -402,7 +406,7 @@ export default {
   width: 120px;
   height: 100px;
 }
-.tp8 {
+.tp8 { 
   width: 100%;
 }
 .tp9 {
@@ -413,7 +417,7 @@ export default {
   background-color: white;
 }
 .box li:nth-of-type(2) {
-  width: 170px;
+  width: 200px;
   color: #837d7d;
   font-size: 15px;
   white-space: nowrap;
@@ -423,27 +427,32 @@ export default {
 .tp10 {
   width: 60px;
   height: 20px;
-  position: absolute;
-  margin: 0px -60px;
+  justify-content: flex-start
 }
 .jg {
-  /* position: absolute;
-  left: 0; */
   text-decoration: line-through;
   color: #a8a6a6;
   justify-content: flex-start;
 }
-/* .box li:nth-of-type(3){
-  color: red;
-}
-.xl{
-  margin-left: 80px;
-  color: #a8a6a6;
-} */
 .content7{
   padding-top: 10px;
 }
 .content8{
 padding-top: 50px;
+}
+.jg1{
+  justify-content: flex-start;
+}
+.jg2{
+  width: 200px;
+  display: flex;
+  color: red;
+}
+.jg3{
+  width: 200px;
+  display: flex;
+}
+.xl{
+  padding-left: 50px;
 }
 </style>

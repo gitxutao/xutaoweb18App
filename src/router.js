@@ -9,7 +9,39 @@ export default new Router({
   routes: [
     {
       path: '/',
+     component:()=>import('./views/Home.vue')
+    },
+    {
+      path: '/wdqb',
+     component:()=>import('./views/Wdqb.vue'),
+     beforeEnter(to,from,next){
+       console.log(to,from,next);
+       if(JSON.parse(sessionStorage.getItem("user"))){
+         next();
+       }else{
+         next("/gwc");
+       }
+     }
+    },
+    {
+      path: '/register',
      component:()=>import('./views/register')
+    },
+    {
+      path: '/gwc',
+     component:()=>import('./views/gwc')
+    },
+    {
+      path: '/wd',
+     component:()=>import('./views/wd')
+    },
+    {
+      path: '/dp',
+     component:()=>import('./views/dp')
+    },
+    {
+      path: '/xx',
+     component:()=>import('./views/xx')
     },
     {
       path: '/login',
@@ -22,6 +54,10 @@ export default new Router({
     {
       path: '/spxq',
       component:()=>import('./views/spxq')
+    },
+    {
+      path: '/pj',
+      component:()=>import('./views/pj')
     },
     {
       path: '/fl',
@@ -70,7 +106,7 @@ export default new Router({
         path:'/cj',
         component:()=>import('./views/Cj.vue')
       },
-      ,{
+      {
         path:'/qt',
         component:()=>import('./views/Qt.vue')
       },

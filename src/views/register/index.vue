@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <van-row type="flex" justify="center">
-        <van-col span="11" class="sc">
+        <van-col span="11" class="sc" @click="sc">
           <van-icon name="cross" size="30" />
         </van-col>
         <van-col span="13" class="zc">注册</van-col>
@@ -82,7 +82,10 @@ export default {
           path: "/login?account=" + this.account + "&password=" + this.password
         });
       }
-    }
+    },
+    sc(){
+      this.$router.go(-1)
+    },
   }
 };
 </script>
